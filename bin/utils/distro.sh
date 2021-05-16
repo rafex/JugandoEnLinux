@@ -22,6 +22,7 @@ DISTRO_DEBIAN="debian"
 DISTRO_CENTOS="centos"
 DISTRO_FEDORA="fedora"
 DISTRO_ALPINE="alpine"
+DISTRO_MINT="linuxmint"
 DISTRO_RASPBIAN="raspbian"
 DISTRO_RHEL="Red Hat Enterprise Linux Server"
 RULZZ="rulzz!!"
@@ -51,6 +52,7 @@ function what_distribution_are_you_v2 () {
         fi
     fi
     [ "$WHAT_DISTRO" == "" ] && export WHAT_DISTRO=$what_name
+    echo $WHAT_DISTRO
 }
 
 function what_os_are_you () {

@@ -35,6 +35,3 @@ function winetricks_is_installed (){
     exit 1
   fi
 }
-
-wine_is_installed
-winetricks_is_installed

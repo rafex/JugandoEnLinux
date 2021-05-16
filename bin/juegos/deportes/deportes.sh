@@ -21,8 +21,8 @@
 . juegos/deportes/ProEvolutionSoccer2016/ProEvolutionSoccer2016.sh
 
 function deportes_menu () {
-  local name_of_menu="Web/Proxy"
-  local option_1="Nginx - compile and install"
+  local name_of_menu="Juegos/Deportes"
+  local option_1="ProEvolutionSoccer2016"
 
   trap '' 2  # ignore control + c
   while true
@@ -37,7 +37,9 @@ function deportes_menu () {
     echo "-----------            -----------"
     green_text "================================"
     green_text "================================"
+    echo " "
     echo "Enter 1) ${option_1}"
+    echo " "
     red_text "Presiona la letra 's' y <Enter> para salir."
     yellow_text "Seleciona una opción y presiona <Enter>"
     read answer

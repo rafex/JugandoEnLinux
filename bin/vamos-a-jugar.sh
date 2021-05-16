@@ -26,6 +26,7 @@
 . utils/arch.sh
 . utils/profile.sh
 . utils/path.sh
+. utils/wine.sh
 . utils/exit.sh
 . juegos/juegos.sh
 
@@ -54,11 +55,14 @@ function vamos_a_jugar_menu () {
     blue_text         "------------- Menú -------------"
     echo              "-------                  -------"
     echo              "---    Sistema operativo     ---"
-    red_text "$what_os_are_you"
+    what_os_are_you
+    what_distribution_are_you_v2
     echo              "-----------          -----------"
     green_text        "================================"
     green_text        "================================"
+    echo " "
     echo "Enter 1) ${opcion_1}"
+    echo " "
     red_text "Presiona la letra 's' y <Enter> para salir."
     yellow_text "Seleciona una opción y presiona <Enter>"
     read respuesta

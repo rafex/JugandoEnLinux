@@ -19,6 +19,7 @@
 # Escrito por: Raúl González <rafex@rafex.dev>
 
 function good_bye () {
-  green_text "Good bye!!! :-)"
+  green_text "Adiós!!! :-)"
+  red_text "Entra al sitio: ..."
   exit
 }
