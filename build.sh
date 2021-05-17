@@ -18,7 +18,9 @@
 # Version: 0.1.0
 # Escrito por: Raúl González <rafex@rafex.dev>
 
+JUGANDO_EN_LINUX_INSTALADOR_VERSION="0.1.0-SNAPSHOT"
+
 find . -type f -iname "*.sh" -exec chmod a+x {} +
 # find . -type f -iname "*.sh" -exec chmod +x {} \;
 
-tar -zcvf newbie-installer.tar.gz bin/ --exclude=.DS_Store --exclude=.git*
+tar -zcvf JugandoEnLinux_${JUGANDO_EN_LINUX_INSTALADOR_VERSION}.tar.gz bin/ --exclude=.DS_Store --exclude=.git*

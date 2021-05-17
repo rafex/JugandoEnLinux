@@ -39,6 +39,7 @@ fi
 
 JUGANDO_EN_LINUX_INSTALADOR_VERSION="0.1.0-SNAPSHOT"
 JUGANDO_EN_LINUX_INSTALADOR_RUTA=$(pwd)
+JUGANDO_EN_LINUX="JugandoEnLinux"
 
 function vamos_a_jugar_menu () {
   local opcion_1="Juegos"
