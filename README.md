@@ -8,17 +8,15 @@ Para poder ejecutarlo tenemos dos opciones:
 
 ```Shell
 git clone https://github.com/rafex/JugandoEnLinux.git -b master
-cd JugandoEnLinux
-cd bin
+cd JugandoEnLinux/JugandoEnLinux
 ./vamos-a-jugar.sh
 ```
 
 2) Descargar la versión de lanzamiento (release) aquí:
 
 ```Shell
-unzip JugandoEnLinux.unzip
+tar -xvf JugandoEnLinux_0.1.0-SNAPSHOT.tar.gz
 cd JugandoEnLinux
-cd bin
 ./vamos-a-jugar.sh
 ```
 

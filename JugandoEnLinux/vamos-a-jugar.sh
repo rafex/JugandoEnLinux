@@ -27,6 +27,8 @@
 . utils/profile.sh
 . utils/path.sh
 . utils/wine.sh
+. utils/prefix.sh
+. utils/launcher.sh
 . utils/exit.sh
 . juegos/juegos.sh
 

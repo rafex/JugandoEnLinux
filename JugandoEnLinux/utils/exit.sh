@@ -21,5 +21,6 @@
 function good_bye () {
   green_text "Adiós!!! :-)"
   red_text "Entra al sitio: ..."
-  exit
+  unset WINEPREFIX
+  exit 0
 }
