@@ -22,13 +22,23 @@ function create_launcher () {
   clear
   local answer
   local path
-  green_text "Inserta la ruta (ubicación) donde esta el archivo *.exe del programa"
-  yellow_text "Ejemplo: /home/linux/Descargas/Pro Evolution Soccer 2016/PES2016.exe"
+  local file_exe
+  green_text "Inserta la ruta (ubicación) de la carpeta dónde programa"
+  yellow_text "Ejemplo: /home/linux/Descargas/Pro Evolution Soccer 2016/"
   echo ""
   read path
   echo ""
-  blue_text "La ruta del archivo es: "
+  blue_text "La ruta de la carpeta es: "
   echo $path
+  echo ""
+
+  green_text "Inserta el EXE del programa"
+  yellow_text "Ejemplo: PES2016.exe"
+  echo ""
+  read file_exe
+  echo ""
+  blue_text "El ejecutable es: "
+  echo $file_exe
   echo ""
   # echo "Es correcta [S]i o [N]o:"
   # read answer
@@ -49,7 +59,7 @@ function create_launcher () {
 
 PATH_ORIG=\$(pwd)
 cd '${path}'
-env WINEPREFIX="${WINEPREFIX}" /usr/bin/wine '${path}'
+env WINEPREFIX="${WINEPREFIX}" /usr/bin/wine '${path}/${file_exe}'
 cd \$PATH_ORIG
 EOF
   chmod +x ${HOME}/.local/bin/${GAME}-${JUGANDO_EN_LINUX}
@@ -60,9 +70,9 @@ Name=${GAME} ${JUGANDO_EN_LINUX}
 Exec=${HOME}/.local/bin/${GAME}-${JUGANDO_EN_LINUX}
 Type=Application
 StartupNotify=true
-#Path=${path}
+Path=${path}
 Icon=${PATH_JUGANDO_EN_LINUX}/JugandoEnLinux_logo.png
-#StartupWMClass=${GAME}.exe
+StartupWMClass=${file_exe}.exe
 EOF
   cat ${PATH_JUGANDO_EN_LINUX}/${GAME}-${JUGANDO_EN_LINUX}.desktop
 }
