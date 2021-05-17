@@ -64,14 +64,12 @@ function path_pro_evolution_soccer_2016 () {
   blue_text "La ruta del archivo es: "
   echo $input
   echo ""
-  local GAME="ProEvolutionSoccer2016"
+  local GAME="PES2016"
   local PATH_JUGANDO_EN_LINUX=${HOME}/.local/share/applications/wine/Programs/${JUGANDO_EN_LINUX}
-  local PATH_JUGANDO_EN_LINUX_GAME=${PATH_JUGANDO_EN_LINUX}/${GAME}
   mkdir -p  $PATH_JUGANDO_EN_LINUX
-  mkdir -p  $PATH_JUGANDO_EN_LINUX_GAME
   cp -v assets/JugandoEnLinux_logo.png ${PATH_JUGANDO_EN_LINUX}
-  rm -v ${PATH_JUGANDO_EN_LINUX_GAME}/${GAME}-${JUGANDO_EN_LINUX}.desktop
-  cat > ${PATH_JUGANDO_EN_LINUX_GAME}/${GAME}-${JUGANDO_EN_LINUX}.desktop << EOF
+  rm -v ${PATH_JUGANDO_EN_LINUX}/${GAME}-${JUGANDO_EN_LINUX}.desktop
+  cat > ${PATH_JUGANDO_EN_LINUX}/${GAME}-${JUGANDO_EN_LINUX}.desktop << EOF
 [Desktop Entry]
 Name=${GAME}-${JUGANDO_EN_LINUX}
 Exec=env WINEPREFIX="${WINEPREFIX}" wine '${input}'
@@ -79,9 +77,9 @@ Type=Application
 StartupNotify=true
 #Path=${input}
 Icon=${PATH_JUGANDO_EN_LINUX}/JugandoEnLinux_logo.png
-StartupWMClass=${GAME}.exe
+#StartupWMClass=${GAME}.exe
 EOF
- cat ${PATH_JUGANDO_EN_LINUX_GAME}/${GAME}-${JUGANDO_EN_LINUX}.desktop
+ cat ${PATH_JUGANDO_EN_LINUX}/${GAME}-${JUGANDO_EN_LINUX}.desktop
 }
 
 function reinstall_pro_evolution_soccer_2016 () {

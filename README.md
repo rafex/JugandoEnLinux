@@ -16,8 +16,7 @@ cd bin
 2) Descargar la versión de lanzamiento (release) aquí:
 
 ```Shell
-unzip JugandoEnLinux.unzip
-cd JugandoEnLinux
+tar -xvf JugandoEnLinux_0.1.0-SNAPSHOT.tar.gz
 cd bin
 ./vamos-a-jugar.sh
 ```
