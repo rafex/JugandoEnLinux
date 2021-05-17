@@ -35,3 +35,11 @@ function winetricks_is_installed (){
     exit 1
   fi
 }
+
+function valid_pre_install () {
+  green_text "Inicio de Pre instalación de ${1}"
+  wine_is_installed
+  winetricks_is_installed
+  green_text "Finalizo la Pre instalación de ${1}"
+  echo ""
+}

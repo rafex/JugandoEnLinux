@@ -8,8 +8,7 @@ Para poder ejecutarlo tenemos dos opciones:
 
 ```Shell
 git clone https://github.com/rafex/JugandoEnLinux.git -b master
-cd JugandoEnLinux
-cd bin
+cd JugandoEnLinux/JugandoEnLinux
 ./vamos-a-jugar.sh
 ```
 
@@ -17,7 +16,7 @@ cd bin
 
 ```Shell
 tar -xvf JugandoEnLinux_0.1.0-SNAPSHOT.tar.gz
-cd bin
+cd JugandoEnLinux
 ./vamos-a-jugar.sh
 ```
 
