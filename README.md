@@ -12,7 +12,7 @@ cd JugandoEnLinux/JugandoEnLinux
 ./vamos-a-jugar.sh
 ```
 
-2) Descargar la versión de lanzamiento (release) aquí:
+2) Descargar la versión de lanzamiento [(release)](https://github.com/rafex/JugandoEnLinux/releases/) [aquí](https://github.com/rafex/JugandoEnLinux/releases/):
 
 ```Shell
 tar -xvf JugandoEnLinux_0.1.0-SNAPSHOT.tar.gz
