@@ -21,9 +21,10 @@
 JUGANDO_EN_LINUX_INSTALADOR_VERSION="0.1.0-SNAPSHOT"
 DIA=`date +"%d-%m-%Y"`
 HORA=`date +"%H-%M"`
+FOLDER=RELEASES
 
 find . -type f -iname "*.sh" -exec chmod a+x {} +
 # find . -type f -iname "*.sh" -exec chmod +x {} \;
 
-tar -zcvf JugandoEnLinux_${JUGANDO_EN_LINUX_INSTALADOR_VERSION}-${DIA}_${HORA}.tar.gz --exclude=.DS_Store --exclude=.git* JugandoEnLinux/
-sha512sum JugandoEnLinux_${JUGANDO_EN_LINUX_INSTALADOR_VERSION}-${DIA}_${HORA}.tar.gz | tee JugandoEnLinux_${JUGANDO_EN_LINUX_INSTALADOR_VERSION}-${DIA}_${HORA}.sha512sum
+tar -zcvf ${FOLDER}/JugandoEnLinux_${JUGANDO_EN_LINUX_INSTALADOR_VERSION}-${DIA}_${HORA}.tar.gz --exclude=.DS_Store --exclude=.git* JugandoEnLinux/
+sha512sum ${FOLDER}/JugandoEnLinux_${JUGANDO_EN_LINUX_INSTALADOR_VERSION}-${DIA}_${HORA}.tar.gz | tee ${FOLDER}/JugandoEnLinux_${JUGANDO_EN_LINUX_INSTALADOR_VERSION}-${DIA}_${HORA}.sha512sum
